@@ -11,6 +11,8 @@ export const Charecter = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState(false);
 
+  const [page, setPage] = useState(1);
+
   const [isWindowOpen, setIsWindowOpen] = useState(false);
   const [windowData, setWindowData] = useState(null);
 
@@ -20,17 +22,30 @@ export const Charecter = () => {
       request(`/character/?name=${name}&gender=${gender}&status=${status}`)
       .then(result => setCharacter(result.results))
       .catch(e => setError(true))
-    } else {
-      request(`/character`)
-      .then(result => {
-        setCharacter(result.results)
-        console.log(result.results)
-        })
     }
-  }, [gender, status, name])
+    console.log('1')
+  }, [gender, status, name, page])
+
+
+  useEffect(() => {
+    request(`/character/?page=${page}`)
+      .then(result => {
+        setCharacter(prev => [...prev, ...result.results])
+        console.log(result.results)
+      })
+  }, [page])
+
+  const handleScroll = (event) => {
+    const { scrollHeight } = event.currentTarget;
+    const { scrollY, innerHeight } = window;
+
+    if (Math.round(scrollY + innerHeight) === scrollHeight) {
+      setPage(prev => prev + 1);
+    }
+  }
 
   return (
-    <>
+    <div onWheel={handleScroll}>
       {isWindowOpen && <ModalWindow {...windowData} reset={setIsWindowOpen} />}
       <div>
         <form>
@@ -70,6 +85,7 @@ export const Charecter = () => {
           ))
         }
       </div>
-    </>
+      {/* <p>Loading...</p> */}
+    </div>
   );
 };

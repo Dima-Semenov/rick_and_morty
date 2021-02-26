@@ -1,14 +1,15 @@
 import './App.scss';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import { Charecter } from './Components/Character/Character';
-
+import { Home } from './Components/Home/Home';
+import { Locations } from './Components/Locations/Locations';
 
 function App() {
 
   return (
     <div className="app">
 
-      <div>
+      {/* <div>
         <Link to="/">
           Home
         </Link>
@@ -21,20 +22,20 @@ function App() {
         <Link to="/episodes">
           Episodes
         </Link>
-      </div>
+      </div> */}
 
     <Switch>
       <Route path="/character">
         <Charecter />
       </Route>
       <Route path="/locations">
-        <p>Locations</p>
+        <Locations />
       </Route>
       <Route path="/episodes">
         <p>Episodes</p>
       </Route>
       <Route path="/" exact>
-        <p>Hello, world!</p>
+        <Home />
       </Route>
       <Redirect to="/" />
     </Switch>
