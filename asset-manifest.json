@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/rick_and_morty/static/css/main.de5ea389.chunk.css",
-    "main.js": "/rick_and_morty/static/js/main.30bbbad1.chunk.js",
-    "main.js.map": "/rick_and_morty/static/js/main.30bbbad1.chunk.js.map",
+    "main.css": "/rick_and_morty/static/css/main.7287e212.chunk.css",
+    "main.js": "/rick_and_morty/static/js/main.42271a4c.chunk.js",
+    "main.js.map": "/rick_and_morty/static/js/main.42271a4c.chunk.js.map",
     "runtime-main.js": "/rick_and_morty/static/js/runtime-main.3291f464.js",
     "runtime-main.js.map": "/rick_and_morty/static/js/runtime-main.3291f464.js.map",
-    "static/js/2.48202e6d.chunk.js": "/rick_and_morty/static/js/2.48202e6d.chunk.js",
-    "static/js/2.48202e6d.chunk.js.map": "/rick_and_morty/static/js/2.48202e6d.chunk.js.map",
+    "static/js/2.d4c8a15b.chunk.js": "/rick_and_morty/static/js/2.d4c8a15b.chunk.js",
+    "static/js/2.d4c8a15b.chunk.js.map": "/rick_and_morty/static/js/2.d4c8a15b.chunk.js.map",
     "index.html": "/rick_and_morty/index.html",
-    "static/css/main.de5ea389.chunk.css.map": "/rick_and_morty/static/css/main.de5ea389.chunk.css.map",
-    "static/js/2.48202e6d.chunk.js.LICENSE.txt": "/rick_and_morty/static/js/2.48202e6d.chunk.js.LICENSE.txt",
-    "static/media/Home.scss": "/rick_and_morty/static/media/3.050bff84.png"
+    "static/css/main.7287e212.chunk.css.map": "/rick_and_morty/static/css/main.7287e212.chunk.css.map",
+    "static/js/2.d4c8a15b.chunk.js.LICENSE.txt": "/rick_and_morty/static/js/2.d4c8a15b.chunk.js.LICENSE.txt",
+    "static/media/Home.scss": "/rick_and_morty/static/media/3.050bff84.png",
+    "static/media/Error.39e15366.png": "/rick_and_morty/static/media/Error.39e15366.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3291f464.js",
-    "static/js/2.48202e6d.chunk.js",
-    "static/css/main.de5ea389.chunk.css",
-    "static/js/main.30bbbad1.chunk.js"
+    "static/js/2.d4c8a15b.chunk.js",
+    "static/css/main.7287e212.chunk.css",
+    "static/js/main.42271a4c.chunk.js"
   ]
 }
