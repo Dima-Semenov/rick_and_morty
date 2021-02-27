@@ -10,3 +10,23 @@ export const request = url => fetch(`${URL}${url}`)
       `${response.status} ${response.statusText}`,
     );
   });
+
+export const getCharacter = (page) => {
+  return request(`/character/?page=${page}`);
+}
+
+export const getFiltredCharacter = (name, gender, status) => {
+  return request(`/character/?name=${name}&gender=${gender}&status=${status}`);
+}
+
+export const getLocations = (page) => {
+  return request(`/location/?page=${page}`);
+}
+
+export const getFiltredLocations = (name, type, dimension) => {
+  return request(`/location/?name=${name}&type=${type}&dimension=${dimension}`);
+}
+
+export const getEpisodes = (page) => {
+  return request(`/episode/?page=${page}`);
+}

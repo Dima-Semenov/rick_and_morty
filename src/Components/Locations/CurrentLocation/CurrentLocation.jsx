@@ -1,4 +1,5 @@
 import React from "react";
+import './CurrentLocation.scss';
 
 export const CurrentLocation = ({ name, dimension, type}) => {
 

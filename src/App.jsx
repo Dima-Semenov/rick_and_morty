@@ -3,6 +3,7 @@ import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import { Charecter } from './Components/Character/Character';
 import { Home } from './Components/Home/Home';
 import { Locations } from './Components/Locations/Locations';
+import { Episodes } from './Components/Episodes/Episodes';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
         <Locations />
       </Route>
       <Route path="/episodes">
-        <p>Episodes</p>
+        <Episodes />
       </Route>
       <Route path="/" exact>
         <Home />

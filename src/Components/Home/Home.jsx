@@ -10,9 +10,6 @@ export const Home = () => {
       <div className="home__container">
         <div className="home__img"></div>
         <div className="home__nav">
-          <NavLink className="home__link" to="/">
-            Home
-          </NavLink>
           <NavLink className="home__link" to="/character">
             Character
           </NavLink>
