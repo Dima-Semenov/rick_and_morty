@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getCharacter, getFiltredCharacter } from "../../api";
 import { CurrenHero } from "./CurrentHero/CurrentHero";
-import './Character.scss';
 import { ModalWindow } from "./ModalWindow/ModalWindow";
-import { NavLink } from "react-router-dom";
-import ErrorPhoto from '../../img/Error.png';
+import { Error } from "../Error/Error";
+import { Back } from "../Back/Back";
+import classNames from 'classnames';
+import './Character.scss';
 
 export const Charecter = () => {
   const [character, setCharacter] = useState([]);
@@ -65,56 +66,72 @@ export const Charecter = () => {
 
   return (
     <div className="character" onWheel={handleScroll}>
-
-      <NavLink className="character__back" to="/">
-        Back to home
-      </NavLink>
-
+      <Back />
       <h1 className="character__title">Character</h1>
 
       {isWindowOpen && <ModalWindow {...windowData} reset={setIsWindowOpen} />}
 
       <div className="character__filter">
         <form className="character__form">
-          <label>
-            Search by name:
-            {' '}
+          <div className="character__wrapper">
+            <label htmlFor="name" className="character__text">
+              Search by name
+            </label>
             <input
               type='text'
-              className={`${error ? 'er' : ''}`}
+              id="name"
               value={name}
               placeholder="Search by name"
               onChange={(event) => {
                 setName(event.target.value)
                 setError(false)
               }}
+              className={classNames(
+                "app__input",
+                {'app__input-error': error},
+              )}
             />
-          </label>
+          </div>
 
-          <label>
-            Search by gender:
-            <select value={gender} onChange={(event) => setGender(event.target.value)}>
+          <div className="character__wrapper">
+            <label htmlFor="gender" className="character__text">
+              Search by gender
+            </label>
+            <select
+              id="gender"
+              value={gender}
+              onChange={(event) => setGender(event.target.value)}
+              className="app__input"
+            >
               <option value=''>All</option>
               <option value='male'>Male</option>
               <option value='female'>Female</option>
               <option value='genderless'>Genderless</option>
               <option value='unknown'>Unknown</option>
             </select>
-          </label>
-
-          <label>
-            Search by status:
-            <select value={status} onChange={(event) => setStatus(event.target.value)}>
+          </div>
+          
+          <div className="character__wrapper">
+            <label htmlFor="status" className="character__text">
+              Search by status
+            </label>
+            <select
+              value={status}
+              onChange={(event) => setStatus(event.target.value)}
+              className="app__input"
+              id="status"
+            >
               <option value=''>All</option>
               <option value='alive'>Alive</option>
               <option value='dead'>Dead</option>
               <option value='unknown'>Unknown</option>
             </select>
-          </label>
+          </div>
 
           <button
             type="button"
             onClick={handleClick}
+            className="character__button"
           >
             Reset filter
           </button>
@@ -124,7 +141,7 @@ export const Charecter = () => {
       <div className="character__container">
         {
           error ? (
-            <img src={ErrorPhoto} className="d" alt="Error"/>
+            <Error />
           ) : (
             <>
               {

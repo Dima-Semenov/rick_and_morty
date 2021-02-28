@@ -1,0 +1,30 @@
+.back {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #8FC748;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  transition-duration: .5s;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba($color: #0beb1d, $alpha: 1);
+  }
+}
+
+@media screen and (max-width: 700px) { 
+  .back, .back:hover{
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .back {
+    padding: 10px;
+  }
+}

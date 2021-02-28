@@ -1,0 +1,29 @@
+.error {
+  width: 600px;
+  height: 600px;
+  animation: show 2s 1;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .error {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .error {
+    width: 300px;
+    height: 300px;
+  }
+}

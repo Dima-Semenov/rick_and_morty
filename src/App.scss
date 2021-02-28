@@ -1,3 +1,14 @@
-.app {
-  // text-align: center;
+.app__input {
+  padding: 10px 15px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px green;
+  border: 2px solid green;
+
+  &-error {
+    box-shadow: 0 0 10px red;
+    border: 2px solid red;
+  }
 }

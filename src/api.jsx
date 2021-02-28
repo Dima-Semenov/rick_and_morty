@@ -30,3 +30,7 @@ export const getFiltredLocations = (name, type, dimension) => {
 export const getEpisodes = (page) => {
   return request(`/episode/?page=${page}`);
 }
+
+export const getFilteredEpisodes = (name) => {
+  return request(`/episode/?name=${name}`);
+}

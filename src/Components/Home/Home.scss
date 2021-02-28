@@ -38,8 +38,8 @@
     text-decoration: none;
     background-color: #8FC748;
     font-size: 40px;
-    padding: 10px 20px;
-    width: 250px;
+    padding: 10px 50px;
+    width: 100%;
     border-radius: 20px;
     margin: 10px 0;
     text-align: center;
@@ -49,6 +49,20 @@
     &:hover {
       transform: scale(1.2);
       box-shadow: 0 0 30px rgba($color: #0beb1d, $alpha: 1);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+
+    &__img {
+      display: none;
+    }
+
+    &__container {
+      justify-content: center;
+      margin-top: 50px;
     }
   }
 }
