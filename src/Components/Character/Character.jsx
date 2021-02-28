@@ -52,7 +52,11 @@ export const Charecter = () => {
     const { scrollHeight } = event.currentTarget;
     const { scrollY, innerHeight } = window;
 
-    if (Math.ceil(scrollY + innerHeight) >= scrollHeight && page < 34 && filteredCharacter.length === 0) {
+    if (
+        Math.ceil(scrollY + innerHeight) >= scrollHeight &&
+        page < 34 &&
+        filteredCharacter.length === 0
+      ) {
       setPage(prev => prev + 1);
     }
   }

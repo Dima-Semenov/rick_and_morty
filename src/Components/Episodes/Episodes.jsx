@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { getEpisodes, getFilteredEpisodes } from "../../api";
 import { CurrentEpisodes } from "./CurrentEpisodes/CurrentEpisodes";
 import './Episodes.scss';
@@ -52,7 +51,11 @@ export const Episodes = () => {
     const { scrollY, innerHeight } = window;
 
 
-    if (Math.ceil(scrollY + innerHeight) >= scrollHeight && page < 3 && filteredEpisodes.length === 0) {
+    if (
+      Math.ceil(scrollY + innerHeight) >= scrollHeight &&
+      page < 3 &&
+      filteredEpisodes.length === 0
+      ) {
       setPage(prev => prev + 1);
     }
   }

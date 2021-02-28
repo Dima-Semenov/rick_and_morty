@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { getFiltredLocations, getLocations } from "../../api";
 import { Back } from "../Back/Back";
 import { CurrentLocation } from "./CurrentLocation/CurrentLocation";
-import './Location.scss';
-import classNames from 'classnames';
 import { Error } from "../Error/Error";
+import classNames from 'classnames';
+import './Location.scss';
 
 export const Locations = () => {
   const [locationsData, setLocationsData] = useState([]);

@@ -12,3 +12,14 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+td, tr {
+  padding: 15px;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+@media screen and (max-width: 400px) {
+  td, tr {
+    padding: 5px 2px;
+  }
+}
